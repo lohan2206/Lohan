@@ -16,8 +16,8 @@ public class Escola implements Serializable {
         this.valorMensalidade = valorMensalidade;
         this.dimensoesColegio = dimensoesColegio;
         this.escolaridadeQueOColegioAbrange = escolaridadeQueOColegioAbrange;
-}
-    
+    }
+
     public String getNomeEscola() {
         return this.nomeEscola;
     }
@@ -77,13 +77,10 @@ public class Escola implements Serializable {
                 ", preço=" + this.escolaridadeQueOColegioAbrange + '\''+
                 '}';
     }
-      
+
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Escola escola = (Escola) o;
-        return nomeEscola == escola.nomeEscola && Object.equals(endereco, escola.endereco) && Double.compare(getValorMatricula(), escola.valorMatricula) == 0 && Double.compare(getValorMensalidade(), escola.valorMensalidade) == 0 && Double.compare(getDimensoesColegio(), escola.getDimensoesColegio()) == 0 && Object.equals(getEscolaridadeQueOColegioAbrange(), escola.escolaridadeQueOColegioAbrange);
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     @Override
