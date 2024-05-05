@@ -1,0 +1,24 @@
+
+interface Cadastro {
+    boolean ApagarUmaEscola(Escola escola);
+
+    public boolean cadastrarUmaEscola(Escola escola);
+    
+    Escola procurarUmaEscolaPeloNome(String escolas)
+            throws EscolaNaoEncontrada;
+
+    Escola  procurarUmaEscolaPeloendereco(String escolas)
+            throws EscolaNaoEncontrada;
+
+    Escola  procurarUmaEscolaPeloValorDaMatricula(double escolas)
+            throws EscolaNaoEncontrada;
+
+    Escola  procurarUmaEscolaPeloValorDaMensalidade(double escolas)
+            throws EscolaNaoEncontrada;
+
+    Escola  procurarUmaEscolaPelasDimensões(double escolas)
+            throws EscolaNaoEncontrada;
+
+    Escola  procurarUmaEscolaPelaEscolaridadeAbrangente(String escolas)
+            throws EscolaNaoEncontrada; 
+}
