@@ -17,7 +17,11 @@ public class EscolaListas implements Cadastro {
 
     }
 
-   
+    @Override
+    public  boolean ApagarUmaEscola(String escola) {
+        return false;
+    }
+
     @Override
     public boolean ApagarUmaEscola(Escola escola){
         for (int k = 0; k <= listaescola.size(); k++) {
@@ -47,7 +51,7 @@ public class EscolaListas implements Cadastro {
     }
 
     @Override
-    public Escola  procurarUmaEscolaPeloNome(String escolas)
+    public  Escola  procurarUmaEscolaPeloNome(String escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getNomeEscola().equals(escolas)){
@@ -57,7 +61,7 @@ public class EscolaListas implements Cadastro {
         throw new EscolaNaoEncontrada("Escola não escontrada");
     }
     @Override
-    public Escola  procurarUmaEscolaPeloendereco(String escolas)
+    public  Escola  procurarUmaEscolaPeloendereco(String escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getEndereco().equals(escolas)){
@@ -67,7 +71,7 @@ public class EscolaListas implements Cadastro {
         throw new EscolaNaoEncontrada("Escola não escontrada");
     }
     @Override
-    public Escola  procurarUmaEscolaPeloValorDaMatricula(double escolas)
+    public  Escola  procurarUmaEscolaPeloValorDaMatricula(double escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getValorMatricula() == escolas){
@@ -77,7 +81,7 @@ public class EscolaListas implements Cadastro {
         throw new EscolaNaoEncontrada("Escola não escontrada");
     }
     @Override
-    public Escola  procurarUmaEscolaPeloValorDaMensalidade(double escolas)
+    public  Escola  procurarUmaEscolaPeloValorDaMensalidade(double escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getValorMensalidade() == escolas){
@@ -87,7 +91,7 @@ public class EscolaListas implements Cadastro {
         throw new EscolaNaoEncontrada("Escola não escontrada");
     }
     @Override
-    public Escola  procurarUmaEscolaPelasDimensões(double escolas)
+    public  Escola  procurarUmaEscolaPelasDimensões(double escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getDimensoesColegio() == escolas){
@@ -97,7 +101,7 @@ public class EscolaListas implements Cadastro {
         throw new EscolaNaoEncontrada("Escola não escontrada");
     }
     @Override
-    public Escola  procurarUmaEscolaPelaEscolaridadeAbrangente(String escolas)
+    public  Escola  procurarUmaEscolaPelaEscolaridadeAbrangente(String escolas)
             throws EscolaNaoEncontrada{
         for (Escola k : listaescola){
             if(k.getEscolaridadeQueOColegioAbrange().equals(escolas)){
@@ -105,5 +109,10 @@ public class EscolaListas implements Cadastro {
             }
         }
         throw new EscolaNaoEncontrada("Escola não escontrada");
-}
+    }
+
+    @Override
+    public Escola cadastrarUmaEscola(String nome, String endereco, Double matricula, Double mensalidade, Double tamanho, String escolaridade) {
+        return null;
+    }
 }
