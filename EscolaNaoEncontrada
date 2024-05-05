@@ -1,0 +1,8 @@
+public class EscolaNaoEncontrada extends Exception{
+    public EscolaNaoEncontrada(){
+        super();
+    }
+    public EscolaNaoEncontrada(String nãotemescola){
+        super(nãotemescola);
+}
+}
