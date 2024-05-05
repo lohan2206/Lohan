@@ -1,24 +1,28 @@
 
 interface Cadastro {
-    boolean ApagarUmaEscola(Escola escola);
-
-    public boolean cadastrarUmaEscola(Escola escola);
+        boolean ApagarUmaEscola(String escola);
     
-    Escola procurarUmaEscolaPeloNome(String escolas)
-            throws EscolaNaoEncontrada;
-
-    Escola  procurarUmaEscolaPeloendereco(String escolas)
-            throws EscolaNaoEncontrada;
-
-    Escola  procurarUmaEscolaPeloValorDaMatricula(double escolas)
-            throws EscolaNaoEncontrada;
-
-    Escola  procurarUmaEscolaPeloValorDaMensalidade(double escolas)
-            throws EscolaNaoEncontrada;
-
-    Escola  procurarUmaEscolaPelasDimensões(double escolas)
-            throws EscolaNaoEncontrada;
-
-    Escola  procurarUmaEscolaPelaEscolaridadeAbrangente(String escolas)
-            throws EscolaNaoEncontrada; 
-}
+        boolean ApagarUmaEscola(Escola escola);
+    
+        public boolean cadastrarUmaEscola(Escola escola);
+    
+        Escola  procurarUmaEscolaPeloNome(String escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola  procurarUmaEscolaPeloendereco(String escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola  procurarUmaEscolaPeloValorDaMatricula(double escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola  procurarUmaEscolaPeloValorDaMensalidade(double escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola  procurarUmaEscolaPelasDimensões(double escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola  procurarUmaEscolaPelaEscolaridadeAbrangente(String escolas)
+                throws EscolaNaoEncontrada;
+    
+        Escola cadastrarUmaEscola(String nome, String endereco, Double matricula, Double mensalidade, Double tamanho, String escolaridade);
+    }
