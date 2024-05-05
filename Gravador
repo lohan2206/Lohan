@@ -1,0 +1,40 @@
+import java.io.FileInputStream;
+import java.io.*;
+import java.util.List;
+
+public class Gravador {
+    public List<Escola> lerEscolas() throws IOException {
+        ObjectInputStream in = null;
+        try {
+            in = new ObjectInputStream(new FileInputStream("ListaEscolas.txt"));
+            return (List<Escola>) in.readObject();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("arquivo ListaEscolas.txt não encontrado");
+        } catch (ClassNotFoundException e) {
+            throw new IOException("Classe do objeto gravado no arquivo não encontrada");
+        } catch (IOException e) {
+            System.err.println("IOexeption em GravadorEscolas");
+            throw e;
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+        }
+    }
+
+    public void gravarEscolas(List<Escola> escolas) throws IOException {
+        ObjectOutputStream out = null;
+        try {
+            out = new ObjectOutputStream(new FileOutputStream("ListaEscolas.txt"));
+            out.writeObject(escolas);
+        } catch (FileNotFoundException e) {
+            throw new IOException("Arquivo ListaEscolas.text não encontrado", e);
+        } catch (IOException e) {
+            System.err.println("IOexception em gravarJogos");
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+ }
+}
+}
